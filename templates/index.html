@@ -1,0 +1,341 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - 簡單版</title>
+  
+  
+  
+  
+<style>
+.TT{
+  text-align: center;
+  width:900px;
+  border:2px white solid;
+  margin:5% auto;
+  margin-bottom:0px;
+  padding:10px; 
+  border-radius:50px;
+  background-color: #000080;
+  color:white;
+  font-size:29px;
+  font-family:Microsoft JhengHei;
+  font-weight:bold;
+}
+.VT{
+  width:90px;
+  heigth:80px;  
+  border:2px white solid;
+  margin-top:0%;
+  margin-left:40%;
+  padding:5px;
+  padding-left:20px;
+  border-radius:30px;
+  color:white;
+}
+.LT{
+  width:90px;
+  heigth:80px;  
+  border:2px white solid;
+  margin-top:0%;
+  margin-left:40%;
+  padding:5px;
+  padding-left:20px;
+  border-radius:30px;
+  color:white;
+  
+}
+.RT{
+  width:90px;
+  heigth:80px;  
+  border:2px white solid;
+  padding-left:20px;
+  margin-left:15%;
+  padding:5px;
+  padding-left:10px;
+  margin-top:15px;
+  border-radius:30px;
+  color:white;
+  
+}
+.IOT{
+  width:90px;
+  heigth:80px;  
+  border:2px  white solid;
+  padding-left:20px;
+  margin-left:15%;
+  margin-top:10px;
+  padding:5px;
+  padding-left:10px;
+  border-radius:30px;
+  color:white;
+  text-align: center;
+  
+}
+.OT{
+  width:90px;
+  heigth:80px;  
+  border:2px white solid;
+  margin-left:15%;
+  padding:5px;
+  margin-top:10px;
+  padding-left:10px;
+  border-radius:30px;
+  color:white;
+  text-align: center;
+}
+
+.vitalsign{
+  margin:2% auto;
+  line-height:25px;
+  width:890px;
+  border:2px white solid;
+  padding:10px;
+  padding-left:20px;
+  padding-right:20px;
+  border-radius:10px;
+  margin-bottom:-30px;
+  background-color: #FFAC12;
+  font-size:18px;
+  font-family:Microsoft JhengHei;
+  font-weight:bold;
+}
+.vitalsign_in{
+ 
+ color:black;
+ font-weight:bold;
+ font-family:Microsoft JhengHei;
+ font-size:16px;
+}
+
+.labdata{
+  margin:4% auto;
+  line-height:25px;
+  width:900px;
+  border:2px white solid;
+  padding:10px;
+  padding-left:20px;
+  border-radius:10px;
+  margin-bottom:-30px;
+  background-color: #00EBEB;
+   font-size:18px;
+  font-family:Microsoft JhengHei;
+  font-weight:bold;
+}
+.labdata_in{
+ color:black;
+ font-weight:bold;
+ font-family:Microsoft JhengHei;
+font-size:16px;
+}
+.o{
+  border:0px;
+  
+}
+.A{
+  line-height:25px;
+  width:907px;
+  border:2px white solid;
+  padding-bottom:30px;
+  padding-left:20px;
+  border-radius:10px;
+  border-radius:10px;
+  margin:4% auto;
+  margin-bottom:10px;
+  background-color: #FFBFBF;
+}
+.R{
+  margin-top:3%;
+  margin-left:5%;
+  line-height:25px;
+  width:190px;
+  border:2px white solid;
+  padding:10px;
+  padding-left:20px;
+  border-radius:10px;
+   font-size:18px;
+  font-family:Microsoft JhengHei;
+  font-weight:bold;
+}
+.R_in{
+ color:black;
+ font-weight:bold;
+ font-family:Microsoft JhengHei;
+ font-size:14px;
+}
+.IO{
+  margin-top:-22%;
+  margin-left:35%;
+  line-height:28px;
+  width:190px;
+  border:2px white solid;
+  padding:10px;
+  padding-left:20px;
+  padding-bottom:20px;
+  border-radius:10px;
+   font-size:18px;
+  font-family:Microsoft JhengHei;
+  font-weight:bold;
+}
+.IO_in{
+ color:black;
+ font-weight:bold;
+ font-family:Microsoft JhengHei;
+ font-size:14px;
+}
+.others{
+  margin-top:-24.5%;
+  margin-left:65%;
+  line-height:28px;
+  width:190px;
+  heigth:80px;  
+  border:2px white solid;
+  padding:10px;
+  padding-left:20px;
+  padding-bottom:8%;
+  border-radius:10px;
+   font-size:18px;
+  font-family:Microsoft JhengHei;
+  font-weight:bold;
+}
+.others_in{
+ color:white;
+ font-weight:bold;
+ font-family:Microsoft JhengHei;
+ font-size:14px;
+}
+.submit{
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+  color:white;
+  font-weight:bold;
+  font-family:Microsoft JhengHei;
+  font-size:20px;
+  background-color:#FF2626;
+  border-color:#E3E3E3;
+  border-radius:10px;
+  margin-bottom:-10px;
+  margin-left:45% ;
+} 
+  
+.H{
+  margin-top:300px;
+  background-color:lightblue;
+  color:lightblue;
+  border:0px;
+  width: 0px;
+  height: 0px;
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+  <title>ARDS預測</title>
+<div class="TT">呼吸重症病人出院存活預測</div>
+<form action="/" method="POST">
+
+<!--vital_sign-->
+<div class="vitalsign">
+<div class="VT"><label>vital_sign</label></div><br>
+<label class="vitalsign_in">D0_temperature</label>
+ <input type="textbox" name="D0_temperature" size="4" class="o">
+<label class="vitalsign_in">D1_temperature</label>
+ <input type="textbox" name="D1_temperature"size="4" class="o">
+<label class="vitalsign_in">D2_temperature</label>
+ <input type="textbox" name="D2_temperature"size="4" class="o">
+<label class="vitalsign_in">D1_SPO2</label>
+ <input type="textbox" name="D1_SPO2" size="4" class="o">
+ <label class="vitalsign_in">D2_SPO2</label>
+ <input type="textbox" name="D2_SPO2"  size="4" class="o"><br>
+  <label class="vitalsign_in">D1_pulse&emsp;&emsp;&emsp;&ensp;</label>
+ <input type="textbox" name="D1_pulse" size="4" class="o">
+ <label class="vitalsign_in">D2_pulse&emsp;&emsp;&emsp;&ensp;</label>
+ <input type="textbox" name="D2_pulse" size="4" class="o">
+ <label class="vitalsign_in">D1_SBP&emsp;&emsp;&emsp;&ensp;&ensp;</label>
+ <input type="textbox" name="D1_SBP"  size="4"class="o">
+ <label class="vitalsign_in">D2_SBP&ensp;&ensp;</label>
+ <input type="textbox" name="D2_SBP" size="4"class="o">
+ <label class="vitalsign_in">D2_DBP&ensp;</label>
+ <input type="textbox" name="D2_DBP"  size="4" class="o"><br></div>
+<!--Lab_data-->
+<div class="labdata">
+  <div class="LT"><label>Lab_data</label></div><br>
+ <label class="labdata_in">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;CREAT</label>
+ <input type="textbox" name="CREAT" size="4"class="o">
+<label class="labdata_in">BUN</label>
+ <input type="textbox" name="BUN" size="4"class="o">  
+<label class="labdata_in">PLT</label>
+ <input type="textbox" name="PLT" size="4"class="o">
+<label class="labdata_in">ALB</label>
+ <input type="textbox" name="ALB" size="4"class="o">
+ <label class="labdata_in">ALKP</label>
+ <input type="textbox" name="ALKP" size="4"class="o"><br>  
+ <label class="labdata_in">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;WBC</label>
+ <input type="textbox" name="WBC" size="4"class="o">
+ <label class="labdata_in">NEUT</label>
+ <input type="textbox" name="NEUT" size="4"class="o"> 
+  <label class="labdata_in">BILT</label>
+ <input type="textbox" name="BILT" class="o" size="4">
+ <label class="labdata_in">LACTATE</label>
+ <input type="textbox" name="LACTATE" size="4" class="o">
+ <label class="labdata_in">PTP</label>
+ <input type="textbox" name="PTP" size="4"class="o"></div>
+<!--呼吸器--><div class="A">
+  <div class="R">
+  <div class="RT"><label>Respirator</label></div><br>
+<label >D1_FIO2&ensp;</label>
+ <input type="textbox" name="D1_FIO2" size="7"class="o"><br>
+ <label>D2_FIO2&ensp;</label>
+ <input type="textbox" name="D2_FIO2" size="7"class="o"><br>    
+<label>D2_PAW&ensp;</label>
+ <input type="textbox" name="D2_PAW" size="7"class="o"><br>
+ <label>D2_MAPS</label>
+ <input type="textbox" name="D2_MAPS" size="7"class="o"><br></div>
+<!--IO--><div class="IO"><div class="IOT"><label>IO</label></div><br>
+<label>Urine_D0&ensp;</label>
+ <input type="textbox" name="Urine_D0" size="7"class="o"><br>
+ <label>Urine_D1&ensp;</label>
+ <input type="textbox" name="Urine_D1" size="7"class="o"><br>
+ <label>Urine_D2&ensp;</label>
+ <input type="textbox" name="Urine_D2" size="7"class="o"></div><br> 
+ <!--其它--> <div class="others">
+  <div class="OT"><label>Others</label></div><br>
+ <label>&emsp;HGB&emsp;</label>
+ <input type="textbox" name="HGB" size="7"class="o"><br></div></div>
+<!--提交-->
+ <div><input type="submit" value="Submit" class="submit"></div>
+</form>
+
+
+</div>
+  
+  
+  
+  
+
+</body>
+
+</html>
+ 
