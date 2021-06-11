@@ -1,32 +1,371 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>result</title>
+
+  <meta charset="UTF-8">
+
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <title>result</title>
+
+
+
+
+  <style>
+    .TT {
+      text-align: center;
+      width: 900px;
+      border: 2px white solid;
+      margin: 0 auto;
+      margin-bottom: 0px;
+      padding: 10px;
+      border-radius: 50px;
+      background-color: #000080;
+      color: white;
+      font-size: 29px;
+      font-family: Microsoft JhengHei;
+      font-weight: bold;
+    }
+
+    .TT1 {
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 0px;
+      padding: 1px;
+      border-radius: 50px;
+
+      color: black;
+      font-size: 20px;
+      font-family: Microsoft JhengHei;
+
+    }
+
+
+
+    .sigle_data_width_length {
+      margin: 3% auto;
+      height: 400px;
+      width: 1600px;
+      border: 2px white solid;
+      border-radius: 10px;
+      background-color: white;
+      font-size: 18px;
+      font-family: Microsoft JhengHei;
+      font-weight: bold;
+      padding: 10px;
+      margin-top: 25%;
+    }
+
+    .V {
+      text-align: center;
+      line-height: 20px;
+      width: 375px;
+      
+      border: 2px white solid;
+      padding: 15px;
+      
+      padding-bottom: 75px;
+      border-radius: 10px;
+      margin-bottom: -50px;
+      background-color: #FFAC12;
+      font-size: 15px;
+      font-family: Microsoft JhengHei;
+      font-weight: bold;
+      color: white;
+
+    }
+
+    .R {
+      text-align: center;
+      line-height: 20px;
+      width: 375px;
+      
+      border: 2px white solid;
+      padding: 15px;
+      
+      padding-bottom: 215px;
+      border-radius: 10px;
+      margin-bottom: -50px;
+      background-color: #FF7878;
+      font-size: 15px;
+      font-family: Microsoft JhengHei;
+      font-weight: bold;
+      color: white;
+    }
+
+    .L1 {
+      text-align: center;
+
+      width: 375px;
+      border: 2px white solid;
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 10px;
+      padding-bottom: 300px;
+      background-color: #00B2B2;
+      font-size: 15px;
+      font-family: Microsoft JhengHei;
+      font-weight: bold;
+      padding-bottom: 30px;
+      color: white;
+    }
+
+    .L2 {
+      text-align: center;
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 375px;
+      heigth: 375px;
+      border: 2px white solid;
+      padding: 10px;
+
+      padding-top: 10px;
+      padding-right: 20px;
+      padding-bottom: 30px;
+      border-radius: 10px;
+
+      background-color: #00B2B2;
+      font-size: 15px;
+      font-family: Microsoft JhengHei;
+      font-weight: bold;
+      color: white;
+    }
+
+    .tv {
+      width: 90px;
+
+      border: 2px white solid;
+      border-radius: 10px;
+      padding: 5px;
+      padding-left: 10px;
+      color: white;
+    }
+
+    .tl {
+      width: 90px;
+      heigth: 80px;
+      border: 2px white solid;
+      margin-top: 0%;
+      padding: 5px;
+      padding-left: 3px;
+      color: white;
+      border-radius: 10px;
+    }
+
+    .tl2 {
+      width: 90px;
+      heigth: 80px;
+      border: 2px white solid;
+      margin-top: 0%;
+      padding: 5px;
+      padding-left: 3px;
+      color: white;
+      border-radius: 10px;
+
+    }
+
+    .tr {
+      width: 90px;
+      heigth: 80px;
+      border: 2px white solid;
+      margin-top: 0%;
+      padding: 5px;
+      padding-left: 5px;
+      color: white;
+      border-radius: 10px;
+    }
+
+    .die {
+      text-align: center;
+      margin: 3% auto;
+      line-height: 25px;
+      width: 1500px;
+      border: 2px white solid;
+      border-radius: 10px;
+      background-color: #919191;
+      font-size: 18px;
+      font-family: Microsoft JhengHei;
+      font-weight: bold;
+      padding: 10px;
+      color: white;
+      margin-top: 0%;
+    }
+
+    .submit {
+      cursor: pointer;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      width: 100px;
+      height: 50px;
+      color: white;
+      font-weight: bold;
+      font-family: Microsoft JhengHei;
+      font-size: 20px;
+      background-color: #FF2626;
+      border-color: #E3E3E3;
+      border-radius: 10px;
+      margin-bottom: -10px;
+      margin-left: 45%;
+    }
+  </style>
 </head>
-
 <body>
-    <section id="intro">
-        <div class='jumbotron text-center'>
-            <div class="container">
-                <div class="col-md-12">
-                    <h1>
-                        ARDS醫療診斷輔助工具
-                    </h1>
-                    <p>
-                        東海大學 109雲創專題
-                    </p>
+  <section id="intro">
+    <div class='jumbotron jumbotron-fluid text-center'>
+      <div class="container">
+        <div class="col-md-12">
+          <div class="TT">呼吸重症病人出院存活預測</div>
+          <p>
+            東海大學 109雲創專題
+          </p>
 
-                </div>
-            </div>
         </div>
-    </section>
-    <div class="container text-center">
-        <h1>準確率: {{ result }}!</h1>
+      </div>
     </div>
+  </section>
+  <div id="container_Temperature" style="width: 750px; height:400px;  float:left;"></div>
+  <script language="JavaScript">
+    $(document).ready(function () {
+      var title = {
+        text: 'Temperature'
+      };
+      var xAxis = {
+        categories: ['D1', 'D2','D3']
+      };
+      var yAxis = {
+        title: {
+          text: '\xB0C'
+        }
+      };
+      var plotOptions = {
+        line: {
+          dataLabels: {
+            enabled: true
+          },
+          enableMouseTracking: false
+        }
+      };
+      var series = [{
+        name: 'Temperature',
+        data: [{{ D1_temperature }}, {{ D2_temperature }},{{ D3_temperature }}]
+          }
+       ];
+
+    var json = {};
+
+    json.title = title;
+    json.xAxis = xAxis;
+    json.yAxis = yAxis;
+    json.series = series;
+    json.plotOptions = plotOptions;
+    $('#container_Temperature').highcharts(json);
+      
+    });
+
+  </script>
+
+  <div id="container_Urine" style="width: 750px; height: 400px;  float:left;"></div>
+  <script language="JavaScript">
+    $(document).ready(function () {
+      var title = {
+        text: 'Urine'
+      };
+      var xAxis = {
+        categories: ['D1','D2', 'D3']
+      };
+      var yAxis = {
+        title: {
+          text: 'cc '
+        }
+      };
+      var plotOptions = {
+        line: {
+          dataLabels: {
+            enabled: true
+          },
+          enableMouseTracking: false
+        }
+      };
+      var series = [{
+        name: 'Urine',
+        data: [{{ D1_Urine }},{{ D2_Urine }}, {{ D3_Urine }}],
+      }
+   ];
+
+    var json = {};
+
+    json.title = title;
+    json.xAxis = xAxis;
+    json.yAxis = yAxis;
+    json.series = series;
+    json.plotOptions = plotOptions;
+    $('#container_Urine').highcharts(json);
+  
+});
+
+  </script>
+  <div class="sigle_data_width_length">
+    <div class="V col-6 col-sm-4">
+      <label class="tv">Vitalsign</label>
+      <h3>D3_SBP: {{ D3_SBP }} mmHg</h3>
+      <h3>D3_DBP: {{ D3_DBP }} mmHg</h3>
+      <h3>D3_SPO2: {{ D3_SPO2 }} %</h3>
+      <h3>D1_pulse: {{ D1_pulse }} bpm</h3>
+      <h3>D3_pulse: {{ D3_pulse }} bpm</h3>
+    </div>
+    <div class="R col-6 col-sm-4">
+      <label class="tr">Respirator</label>
+      <h3>D3_PAW: {{ D3_PAW }} cmH2O</h3>
+      <h3>D3_MAPS: {{ D3_MAPS }} cmH2O</h3>
+    </div>
+
+    <div class="L1 col-6 col-sm-4">
+      <label class="tl">Laboratory</label>
+      <h3>BUN: {{BUN}} mg/dL </h3>
+      <h3>NEUT: {{ NEUT }} %</h3>
+      <h3>PLT: {{ PLT }} K/uL</h3>
+      <h3>ALB: {{ ALB }} g/dL</h3>
+      <h3>LACTATE: {{ LACTATE }} mmol/L</h3>
+      <h3>BILT: {{BILT}} mg/dL</h3>
+    </div>
+
+    <div class="L2 col-6 col-sm-4">
+      <label class="tl2">Laboratory</label>
+      <h3>CREAT: {{ CREAT }} mg/dL</h3>
+      <h3>ALKP: {{ ALKP }} IU/L</h3>
+      <h3>WBC: {{ WBC }} K/uL</h3>
+      <h3>LACTATE: {{ LACTATE }} mmol/L</h3>
+      <h3>HGB: {{HGB }} g/dL</h3>
+      <h3>PTP: {{ PTP }} sec</h3>
+    </div>
+
+
+  </div>
+
+
+
+
+  <div class="die">
+    <div class="tdie">
+      <h1>預測死亡率: {{ result }}%</h1>
+    </div>
+  </div>
+  <div><input type="submit" onclick="history.back()" value="回上一頁" class="submit"></div>
+</body>
+
+</html>
+
+
+
+
+
 </body>
 
 </html>

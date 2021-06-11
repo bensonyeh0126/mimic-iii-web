@@ -1,336 +1,331 @@
-
-
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
 
   <meta charset="UTF-8">
- 
 
- 
+
 
   <title>呼吸重症病人出院存活預測</title>
-  
-  
-  
-  
-<style>
-.TT{
-  text-align: center;
-  width:900px;
-  border:2px white solid;
-  margin:5% auto;
-  margin-bottom:0px;
-  padding:10px; 
-  border-radius:50px;
-  background-color: #000080;
-  color:white;
-  font-size:29px;
-  font-family:Microsoft JhengHei;
-  font-weight:bold;
-}
-.VT{
-  width:90px;
-  heigth:80px;  
-  border:2px white solid;
-  margin-top:0%;
-  margin-left:40%;
-  padding:5px;
-  padding-left:20px;
-  border-radius:30px;
-  color:white;
-}
-.LT{
-  width:90px;
-  heigth:80px;  
-  border:2px white solid;
-  margin-top:0%;
-  margin-left:40%;
-  padding:5px;
-  padding-left:20px;
-  border-radius:30px;
-  color:white;
-  
-}
-.RT{
-  width:90px;
-  heigth:80px;  
-  border:2px white solid;
-  padding-left:20px;
-  margin-left:15%;
-  padding:5px;
-  padding-left:10px;
-  margin-top:15px;
-  border-radius:30px;
-  color:white;
-  
-}
-.IOT{
-  width:90px;
-  heigth:80px;  
-  border:2px  white solid;
-  padding-left:20px;
-  margin-left:15%;
-  margin-top:10px;
-  padding:5px;
-  padding-left:10px;
-  border-radius:30px;
-  color:white;
-  text-align: center;
-  
-}
-.OT{
-  width:90px;
-  heigth:80px;  
-  border:2px white solid;
-  margin-left:15%;
-  padding:5px;
-  margin-top:10px;
-  padding-left:10px;
-  border-radius:30px;
-  color:white;
-  text-align: center;
-}
 
-.vitalsign{
-  margin:2% auto;
-  line-height:25px;
-  width:890px;
-  border:2px white solid;
-  padding:10px;
-  padding-left:20px;
-  padding-right:20px;
-  border-radius:10px;
-  margin-bottom:-30px;
-  background-color: #FFAC12;
-  font-size:18px;
-  font-family:Microsoft JhengHei;
-  font-weight:bold;
-}
-.vitalsign_in{
- 
- color:black;
- font-weight:bold;
- font-family:Microsoft JhengHei;
- font-size:16px;
-}
 
-.labdata{
-  margin:4% auto;
-  line-height:25px;
-  width:900px;
-  border:2px white solid;
-  padding:10px;
-  padding-left:20px;
-  border-radius:10px;
-  margin-bottom:-30px;
-  background-color: #00EBEB;
-   font-size:18px;
-  font-family:Microsoft JhengHei;
-  font-weight:bold;
-}
-.labdata_in{
- color:black;
- font-weight:bold;
- font-family:Microsoft JhengHei;
-font-size:16px;
-}
-.o{
-  border:0px;
-  
-}
-.A{
-  line-height:25px;
-  width:907px;
-  border:2px white solid;
-  padding-bottom:30px;
-  padding-left:20px;
-  border-radius:10px;
-  border-radius:10px;
-  margin:4% auto;
-  margin-bottom:10px;
-  background-color: #FFBFBF;
-}
-.R{
-  margin-top:3%;
-  margin-left:5%;
-  line-height:25px;
-  width:190px;
-  border:2px white solid;
-  padding:10px;
-  padding-left:20px;
-  border-radius:10px;
-   font-size:18px;
-  font-family:Microsoft JhengHei;
-  font-weight:bold;
-}
-.R_in{
- color:black;
- font-weight:bold;
- font-family:Microsoft JhengHei;
- font-size:14px;
-}
-.IO{
-  margin-top:-22%;
-  margin-left:35%;
-  line-height:28px;
-  width:190px;
-  border:2px white solid;
-  padding:10px;
-  padding-left:20px;
-  padding-bottom:20px;
-  border-radius:10px;
-   font-size:18px;
-  font-family:Microsoft JhengHei;
-  font-weight:bold;
-}
-.IO_in{
- color:black;
- font-weight:bold;
- font-family:Microsoft JhengHei;
- font-size:14px;
-}
-.others{
-  margin-top:-24.5%;
-  margin-left:65%;
-  line-height:28px;
-  width:190px;
-  heigth:80px;  
-  border:2px white solid;
-  padding:10px;
-  padding-left:20px;
-  padding-bottom:8%;
-  border-radius:10px;
-   font-size:18px;
-  font-family:Microsoft JhengHei;
-  font-weight:bold;
-}
-.others_in{
- color:white;
- font-weight:bold;
- font-family:Microsoft JhengHei;
- font-size:14px;
-}
-.submit{
-  cursor:pointer;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  width: 100px;
-  height: 50px;
-  color:white;
-  font-weight:bold;
-  font-family:Microsoft JhengHei;
-  font-size:20px;
-  background-color:#FF2626;
-  border-color:#E3E3E3;
-  border-radius:10px;
-  margin-bottom:-10px;
-  margin-left:45% ;
-} 
-  
-.H{
-  margin-top:300px;
-  background-color:lightblue;
-  color:lightblue;
-  border:0px;
-  width: 0px;
-  height: 0px;
-}
-</style>
 
-  
-  
-  
-  
+
+  <style>
+    .TT {
+      text-align: center;
+      width: 900px;
+      border: 2px white solid;
+      margin: 5% auto;
+      margin-bottom: 0px;
+      padding: 10px;
+      border-radius: 50px;
+      background-color: #000080;
+      color: white;
+      font-size: 29px;
+      font-family: Microsoft JhengHei;
+      font-weight: bold;
+    }
+
+    .TT1 {
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 0px;
+      padding: 1px;
+      border-radius: 50px;
+
+      color: black;
+      font-size: 20px;
+      font-family: Microsoft JhengHei;
+
+    }
+
+    .VT {
+      width: 90px;
+      heigth: 80px;
+      border: 2px white solid;
+      margin-top: 0%;
+      margin-left: 40%;
+      padding: 5px;
+      padding-left: 10px;
+      border-radius: 30px;
+      color: white;
+    }
+
+    .LT {
+      width: 90px;
+      heigth: 80px;
+      border: 2px white solid;
+      margin-top: 0%;
+      margin-left: 40%;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border-radius: 30px;
+      color: white;
+
+    }
+
+    .RT {
+      width: 90px;
+      border: 2px white solid;
+      padding-left: 20px;
+      margin-left: 33%;
+      padding: 5px;
+      padding-left: 10px;
+      margin-top: 15px;
+      border-radius: 30px;
+      color: white;
+
+    }
+
+    .IOT {
+      width: 90px;
+      border: 2px white solid;
+      padding-left: 20px;
+      margin-left: 33%;
+      margin-top: -15px;
+      padding: 5px;
+      padding-left: 10px;
+      border-radius: 30px;
+      color: white;
+      text-align: center;
+
+    }
+
+
+    .vitalsign {
+      margin: 2% auto;
+      line-height: 25px;
+      width: 890px;
+      border: 2px white solid;
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 10px;
+      margin-bottom: -30px;
+      background-color: #FFAC12;
+      font-size: 18px;
+      font-family: Microsoft JhengHei;
+      font-weight: bold;
+      text-align:center;
+    }
+
+    .vitalsign_in {
+
+      color: black;
+      font-weight: bold;
+      font-family: Microsoft JhengHei;
+      font-size: 16px;
+    }
+
+    .labdata {
+      margin: 4% auto;
+      line-height: 25px;
+      width: 900px;
+      border: 2px white solid;
+      padding: 10px;
+      padding-left: 20px;
+      border-radius: 10px;
+      margin-bottom: -30px;
+      background-color: #00EBEB;
+      font-size: 18px;
+      font-family: Microsoft JhengHei;
+      font-weight: bold;
+      text-align:center;
+    }
+
+    .labdata_in {
+      color: black;
+      font-weight: bold;
+      font-family: Microsoft JhengHei;
+      font-size: 16px;
+    }
+
+    .o {
+      border: 0px;
+
+    }
+
+    .A {
+      line-height: 25px;
+      width: 907px;
+      border: 2px white solid;
+      padding-bottom: 30px;
+      padding-left: 20px;
+      border-radius: 10px;
+      border-radius: 10px;
+      margin: 4% auto;
+      margin-bottom: 10px;
+      background-color: #FFBFBF;
+    }
+
+    .R {
+      text-align: center;
+      margin-top: 5%;
+      margin-left: 5%;
+      line-height: 25px;
+      width: 350px;
+      border: 2px white solid;
+      padding: 10px;
+      padding-left: 20px;
+      padding-bottom:70px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-family: Microsoft JhengHei;
+      font-weight: bold;
+    }
+
+    .R_in {
+      color: black;
+      font-weight: bold;
+      font-family: Microsoft JhengHei;
+      font-size: 14px;
+    }
+
+    .IO {
+      text-align: center;
+      margin-top: -23%;
+      margin-left: 50%;
+      line-height: 28px;
+      width: 350px;
+      border: 2px white solid;
+      padding: 25px;
+      padding-left: 20px;
+      padding-bottom: 45px;
+      border-radius: 10px;
+      font-size: 18px;
+      font-family: Microsoft JhengHei;
+      font-weight: bold;
+    }
+
+    .IO_in {
+      color: black;
+      font-weight: bold;
+      font-family: Microsoft JhengHei;
+      font-size: 14px;
+    }
+
+    .submit {
+      cursor: pointer;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      width: 100px;
+      height: 50px;
+      color: white;
+      font-weight: bold;
+      font-family: Microsoft JhengHei;
+      font-size: 20px;
+      background-color: #FF2626;
+      border-color: #E3E3E3;
+      border-radius: 10px;
+      margin-bottom: -10px;
+      margin-left: 45%;
+    }
+
+    .H {
+      margin-top: 300px;
+      background-color: lightblue;
+      color: lightblue;
+      border: 0px;
+      width: 0px;
+      height: 0px;
+    }
+  </style>
+
+
+
+
+
 
 </head>
 
-<body translate="no" >
+<body translate="no">
   <title>ARDS預測</title>
-<div class="TT">呼吸重症病人出院存活預測</div>
-<form action="/" method="POST">
+  <div class="TT">呼吸重症病人出院存活預測</div>
+  <div class="TT1">東海大學 109雲創專題</div>
+  <form action="/" method="POST">
 
-<!--vital_sign-->
-<div class="vitalsign">
-<div class="VT"><label>vital_sign</label></div><br>
-<label class="vitalsign_in">D0_temperature</label>
- <input required type="textbox" name="D0_temperature" size="4" class="o" placeholder="°C">
-<label class="vitalsign_in">D1_temperature</label>
- <input required type="textbox" name="D1_temperature"size="4" class="o"placeholder="°C">
-<label class="vitalsign_in">D2_temperature</label>
- <input required type="textbox" name="D2_temperature"size="4" class="o" placeholder="°C">
-<label class="vitalsign_in">D1_SPO2</label>
- <input required type="textbox" name="D1_SPO2" size="4" class="o" placeholder="%">
- <label class="vitalsign_in">D2_SPO2</label>
- <input required type="textbox" name="D2_SPO2"  size="4" class="o" placeholder="%"><br>
-  <label class="vitalsign_in">D1_pulse&emsp;&emsp;&emsp;&ensp;</label>
- <input required type="textbox" name="D1_pulse" size="4" class="o" placeholder="bpm">
- <label class="vitalsign_in">D2_pulse&emsp;&emsp;&emsp;&ensp;</label>
- <input required type="textbox" name="D2_pulse" size="4" class="o" placeholder="bpm">
- <label class="vitalsign_in">D1_SBP&emsp;&emsp;&emsp;&ensp;&ensp;</label>
- <input required type="textbox" name="D1_SBP"  size="4"class="o" placeholder="mmHg">
- <label class="vitalsign_in">D2_SBP&ensp;&ensp;</label>
- <input required type="textbox" name="D2_SBP" size="4"class="o" placeholder="mmHg">
- <label class="vitalsign_in">D2_DBP&ensp;</label>
- <input required type="textbox" name="D2_DBP"  size="4" class="o" placeholder="mmHg"><br></div>
-<!--Lab_data-->
-<div class="labdata">
-  <div class="LT"><label>Lab_data</label></div><br>
- <label class="labdata_in">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;CREAT</label>
- <input required type="textbox" name="CREAT" size="4"class="o" placeholder="mg/dL">
-<label class="labdata_in">BUN</label>
- <input required type="textbox" name="BUN" size="4"class="o" placeholder="mg/dL">  
-<label class="labdata_in">PLT</label>
- <input required type="textbox" name="PLT" size="4"class="o "placeholder="K/uL">
-<label class="labdata_in">ALB</label>
- <input required type="textbox" name="ALB" size="4"class="o" placeholder="g/dL">
- <label class="labdata_in">ALKP</label>
- <input required type="textbox" name="ALKP" size="4"class="o" placeholder="IU/L"><br>  
- <label class="labdata_in">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;WBC</label>
- <input required type="textbox" name="WBC" size="4"class="o" placeholder="K/uL">
- <label class="labdata_in">NEUT</label>
- <input required type="textbox" name="NEUT" size="4"class="o" placeholder="%"> 
-  <label class="labdata_in">BILT</label>
- <input required type="textbox" name="BILT" class="o" size="4" placeholder="mg/dL">
- <label class="labdata_in">LACTATE</label>
- <input required type="textbox" name="LACTATE" size="4" class="o" placeholder="mmol/L">
- <label class="labdata_in">PTP</label>
- <input required type="textbox" name="PTP" size="4"class="o" placeholder="sec"></div>
-<!--呼吸器--><div class="A">
-  <div class="R">
-  <div class="RT"><label>Respirator</label></div><br>
-<label >D1_FIO2&ensp;</label>
- <input required type="textbox" name="D1_FIO2" size="7"class="o" placeholder="%"><br>
- <label>D2_FIO2&ensp;</label>
- <input required type="textbox" name="D2_FIO2" size="7"class="o" placeholder="%"><br>    
-<label>D2_PAW&ensp;</label>
- <input required type="textbox" name="D2_PAW" size="7"class="o" placeholder="cmH2O"><br>
- <label>D2_MAPS</label>
- <input required type="textbox" name="D2_MAPS" size="7"class="o" placeholder="cmH2O"><br></div>
-<!--IO--><div class="IO"><div class="IOT"><label>IO</label></div><br>
-<label>Urine_D0&ensp;</label>
- <input required type="textbox" name="Urine_D0" size="7"class="o" placeholder="cc"><br>
- <label>Urine_D1&ensp;</label>
- <input required type="textbox" name="Urine_D1" size="7"class="o" placeholder="cc"><br>
- <label>Urine_D2&ensp;</label>
- <input required type="textbox" name="Urine_D2" size="7"class="o" placeholder="cc"></div><br> 
- <!--其它--> <div class="others">
-  <div class="OT"><label>Others</label></div><br>
- <label>&emsp;HGB&emsp;</label>
- <input required type="textbox" name="HGB" size="7"class="o" placeholder="gd/L"><br></div></div>
-<!--提交-->
- <div><input required type="submit" value="Submit" class="submit"></div>
-</form>
+    <!--vital_sign-->
+    <div class="vitalsign">
+      <div class="VT"><label>Vital_sign</label></div><br>
+      <label class="vitalsign_in">D1_temperature</label>
+      <input required type="textbox" name="D1_temperature" size="4" class="o" placeholder="°C">
+      <label class="vitalsign_in">D2_temperature</label>
+      <input required type="textbox" name="D2_temperature" size="4" class="o" placeholder="°C">
+      <label class="vitalsign_in">D3_temperature</label>
+      <input required type="textbox" name="D3_temperature" size="4" class="o" placeholder="°C">
+      
+      <label class="vitalsign_in">D1_pulse</label>
+      <input required type="textbox" name="D1_pulse" size="4" class="o" placeholder="bpm"><br>
+      <label class="vitalsign_in">D3_pulse</label>
+      <input required type="textbox" name="D3_pulse" size="4" class="o" placeholder="bpm">
+      <label class="vitalsign_in">D3_SPO2</label>
+      <input required type="textbox" name="D3_SPO2" size="4" class="o" placeholder="%">
+      <label class="vitalsign_in">D3_SBP&ensp;&ensp;</label>
+      <input required type="textbox" name="D3_SBP" size="4" class="o" placeholder="mmHg">
+      <label class="vitalsign_in">D3_DBP&ensp;</label>
+      <input required type="textbox" name="D3_DBP" size="4" class="o" placeholder="mmHg"><br>
+    </div>
+    <!--Lab_data-->
+    <div class="labdata">
+      <div class="LT"><label>Laboratory</label></div><br>
+      <label class="labdata_in">CREAT</label>
+      <input required type="textbox" name="CREAT" size="4" class="o" placeholder="mg/dL">
+      <label class="labdata_in">BUN</label>
+      <input required type="textbox" name="BUN" size="4" class="o" placeholder="mg/dL">
+      <label class="labdata_in">PLT</label>
+      <input required type="textbox" name="PLT" size="4" class="o" placeholder="K/uL">
+      <label class="labdata_in">ALB</label>
+      <input required type="textbox" name="ALB" size="4" class="o" placeholder="g/dL">
+      <label class="labdata_in">NEUT</label>
+      <input required type="textbox" name="NEUT" size="4" class="o" placeholder="%">
+      <label class="labdata_in">BILT</label>
+      <input required type="textbox" name="BILT" class="o" size="4" placeholder="mg/dL"><br>
+      <label class="labdata_in">LACTATE</label>
+      <input required type="textbox" name="LACTATE" size="4" class="o" placeholder="mmol/L">
+
+      <label class="labdata_in">ALKP</label>
+      <input required type="textbox" name="ALKP" size="4" class="o" placeholder="IU/L">
+      <label class="labdata_in">WBC</label>
+      <input required type="textbox" name="WBC" size="4" class="o" placeholder="K/uL">
+      <label class="labdata_in">HGB</label>
+      <input required type="textbox" name="HGB" size="4" class="o" placeholder="g/dL">
+      <label class="labdata_in">PTP</label>
+      <input required type="textbox" name="PTP" size="4" class="o" placeholder="sec">
+    </div>
+    <!--呼吸器-->
+    <div class="A">
+      <div class="R">
+        <div class="RT"><label>Respirator</label></div><br>
+        <label>D3_MAPS&ensp;</label>
+        <input required type="textbox" name="D3_MAPS" size="7" class="o" placeholder="cmH2O"><br>
+        <label>D3_PAW</label>
+        <input required type="textbox" name="D3_PAW" size="7" class="o" placeholder="cmH2O"><br>
+      </div>
+      <!--IO-->
+      <div class="IO">
+        <div class="IOT"><label>IO</label></div><br>
+        <label>D1_Urine&ensp;</label>
+        <input required type="textbox" name="D1_Urine" size="7" class="o" placeholder="cc"><br>
+        <label>D2_Urine&ensp;</label>
+        <input required type="textbox" name="D2_Urine" size="7" class="o" placeholder="cc"><br>
+        <label>D3_Urine&ensp;</label>
+        <input required type="textbox" name="D3_Urine" size="7" class="o" placeholder="cc"><br>
+      </div><br>
+    </div>
+    <!--提交-->
+    <div><input required type="submit" value="Submit" class="submit"></div>
+  </form>
 
 
-</div>
-  
-  
-  
-  
+  </div>
+
+
+
+
 
 </body>
 
 </html>
- 
