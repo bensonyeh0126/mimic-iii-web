@@ -73,4 +73,4 @@ def submit():
                                          D3_DBP=D3_DBP,D1_temperature=D1_temperature,BILT=BILT,CREAT=CREAT,D3_PAW=D3_PAW,D1_pulse=D1_pulse,result=result[0][1]*100)   
 
 if __name__ == '__main__':
- app.run(debug=True,host="127.0.0.1", port=5000)
+ app.run(debug=True)
